@@ -14,7 +14,7 @@ fun main() {
 
 // SuperEmployee implements both coding and designing
 // however it delegates these implementations to other employees using `by`
-internal class SuperEmployee(coder: Coders, designer: Designers) : WhoCanCode by coder, WhoCanDesign by designer
+internal class SuperEmployee(coder: WhoCanCode, designer: WhoCanDesign) : WhoCanCode by coder, WhoCanDesign by designer
 
 //    Skill sets
 internal interface WhoCanCode {
